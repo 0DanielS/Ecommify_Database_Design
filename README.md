@@ -235,7 +235,7 @@ jupyter notebook
 
 ## 🤝 Contribuciones
 
-Este proyecto es un trabajo académico desarrollado como parte de estudios de Diseño y optimización en bases de atos. Las contribuciones pueden incluir:
+Este proyecto es un trabajo académico desarrollado como parte de estudios de Diseño y optimización en bases de datos. Las contribuciones pueden incluir:
 
 - Mejoras en análisis y visualizaciones
 - Optimizaciones de esquema
@@ -246,7 +246,7 @@ Este proyecto es un trabajo académico desarrollado como parte de estudios de Di
 
 ## 👨‍💼 Autor
 
-Desarrollado como proyecto de investigación en **Diseño y optimización en bases de atos** - Maestría Arquitectura de software.
+Desarrollado como proyecto de investigación en **Diseño y optimización en bases de datos** - Maestría Arquitectura de software.
 
 ---
 
