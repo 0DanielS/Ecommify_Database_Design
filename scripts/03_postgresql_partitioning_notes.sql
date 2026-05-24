@@ -1,0 +1,23 @@
+-- Script preliminar de referencia para particionamiento futuro.
+-- No se ejecuta por defecto sobre tablas ya creadas.
+-- Se deja como base para evolucionar orders y tablas de hechos.
+
+-- Ejemplo de estrategia objetivo:
+-- 1. Crear una tabla particionada orders_partitioned por rango mensual.
+-- 2. Migrar datos desde ecommify.orders.
+-- 3. Reapuntar FKs de tablas hijas si el volumen futuro lo justifica.
+
+-- Ejemplo ilustrativo:
+-- CREATE TABLE ecommify.orders_partitioned (
+--     LIKE ecommify.orders INCLUDING ALL
+-- ) PARTITION BY RANGE (order_purchase_timestamp);
+--
+-- CREATE TABLE ecommify.orders_2018_01 PARTITION OF ecommify.orders_partitioned
+-- FOR VALUES FROM ('2018-01-01') TO ('2018-02-01');
+--
+-- CREATE TABLE ecommify.orders_2018_02 PARTITION OF ecommify.orders_partitioned
+-- FOR VALUES FROM ('2018-02-01') TO ('2018-03-01');
+--
+-- Recomendacion actual:
+-- - Mantener tablas sin particionar en la primera iteracion.
+-- - Activar particionamiento cuando el crecimiento real o las ventanas de consulta lo exijan.
